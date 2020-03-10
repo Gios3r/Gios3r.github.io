@@ -7,12 +7,19 @@
 
     .page {
         min-height: 100%;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-rows:auto 1fr auto ;
     }
 
     .header, .footer {
         background-color: black;
         color: white;
         padding: 2em;
+    }
+
+    .footer{
+        align-self: flex-end;
     }
 
     .body {
@@ -24,6 +31,9 @@
         list-style-type: none;
         margin: auto;
         width: 75%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        grid-gap: 1em;
     }
 
     .explorer li {
